@@ -5,7 +5,10 @@ class control_acceuil extends CI_Controller {
       
     public function index()  
     {  
-        $this->load->view('Login');  
+        $this->load->view('Login'); 
+        $this->load->model('Regime_mdoel'); 
+        $data['regimes'] = $this->Regime_model->get_regimes();
+        $this->load->view('acceuil_admin',$data);
     }  
 
     public function allUtilisateur($id){

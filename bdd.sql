@@ -21,7 +21,7 @@ foreign key (id_user) references user(id_user),
 
 create table if not exists choice(
     id_choice int PRIMARY KEY AUTO_Increment NOT NULL,
-    choice VARCHAR(100),
+    choice VARCHAR(100)
 
 );
 
@@ -29,6 +29,12 @@ create table if not exists code (
     id_code int primary key auto_increment not null ,
     code varchar(5),
     isValid boolean
+);
+
+create table if not exists regime(
+    id_regime int primary key auto_increment not null,
+    regime varchar(100),
+    efficacite float
 );
 
 insert into code(id_code,code,isValid) values 
