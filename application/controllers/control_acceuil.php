@@ -16,7 +16,9 @@ class control_acceuil extends CI_Controller {
     }
     public function allAdmin($id){
         $data = array();
+        $this->load->view('header',$data);
 		$this->load->view('acceuil_admin',$data);
+        $this->load->view('footer',$data);
     }
 }  
 ?>

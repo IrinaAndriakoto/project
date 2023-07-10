@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#about">Your Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Service">Services</a>
@@ -47,7 +47,7 @@
                     <a class="nav-link" href="#testmonial">Reviews</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Log Out</a>
+                    <a class="nav-link" href="<?php echo site_url('control_acceuil/index'); ?>">Log Out</a>
                 </li>
             </ul>
         </div>

@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello Admin</h1>
-</body>
-</html>
+<!-- header -->
+<header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">TABLEAU DE BORD</h1>
+        </div>
+    </header>
+
+<script src="<?php echo base_url('assets/vendors/jquery/jquery-3.4.1.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.bundle.js'); ?>"></script>
+
+    <!-- bootstrap affix -->
+    <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.affix.js'); ?>"></script>
+
+    <!-- wow.js -->
+    <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.affix.js'); ?>"></script>
+    
+    <!-- FoodHut js -->
+    <script src="<?php echo base_url('assets/js/foodhut.js'); ?>"></script>
