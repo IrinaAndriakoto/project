@@ -15,4 +15,15 @@ class User_model extends CI_Model{
         $this->db->escape($user_pwd));
         $this->db->query($sql);
     }
+    
+    public function completion($id_user, $genre, $poids, $taille) {
+        $data = array(
+            'id_user' => $id_user,
+            'genre' => $genre,
+            'poids' => $poids,
+            'taile' => $taille
+        );
+    
+        $this->db->insert('aboutUser', $data);
+    }
 }

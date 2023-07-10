@@ -64,6 +64,21 @@ class Login extends CI_Controller {
         $this->session->unset_userdata('user');  
         redirect("Login");  
     }  
+    
+    public function completion_user()
+    {
+        $this->load->view('accueil');  
+        $data=array();
+        //var_dump($id);  
+        
+        $user =$this->session->userdata('user');
+        $id=$user[0]['id_user'];
+        $genre = $this->input->post('genre');   
+        $poids = $this->input->post('poids');
+        $taile = $this->input->post('taile');
+        $this->load->model('User_model');     
+        $this->User_model->completion($id,$genre,$poids,$taile);
+    }  
   
 }  
 ?>
