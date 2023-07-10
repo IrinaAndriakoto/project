@@ -1,5 +1,4 @@
-    <!-- page footer  -->
-    <div class="container-fluid bg-dark text-light has-height-md middle-items border-top text-center wow fadeIn">
+<div class="container-fluid bg-dark text-light has-height-md middle-items border-top text-center wow fadeIn">
         <div class="row">
             <div class="col-sm-4">
                 <h3>EMAIL US</h3>
@@ -21,18 +20,3 @@
         <p class="mb-0 py-3 text-muted small">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Made with <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com">DevCRUD</a></p>
     </div>
     <!-- end of page footer -->
-<!-- core  -->
-<script src="<?php echo base_url('assets/vendors/jquery/jquery-3.4.1.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.bundle.js'); ?>"></script>
-
-    <!-- bootstrap affix -->
-    <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.affix.js'); ?>"></script>
-
-    <!-- wow.js -->
-    <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.affix.js'); ?>"></script>
-    
-    <!-- FoodHut js -->
-    <script src="<?php echo base_url('assets/js/foodhut.js'); ?>"></script>
-
-    </body>
-</html>
