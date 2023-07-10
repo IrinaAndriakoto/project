@@ -1,23 +1,37 @@
-.login-dark{
+/* .login-dark{
  width: 400px;
  text-align: center;
  /* margin-left: 600px; */
  /* margin-top: 200px; */
  /* background-color: red; */
-}
+
+ body{
+    text-align: center;
+ }
 
 .sary{
-    width: 50px;
+    width: 80px;
     height: 50px;
 }
 
 .col-md-4{
     width: 400px;
+    margin-top: 200px;
+    margin-left: 75px;
     height: 300px;
     text-align: center;
 }
 
-.row{
+/* .row{
     margin-top: 200px;
     margin-left: 150px;
+} */
+
+.col-md-12{
+    /* background-color: rgb(238, 237, 237); */
+    height: 500px;
+    padding: 60px;
+    margin-top: 120px;
+    /* box-shadow: 70cm; */
+    /* margin-right: 100px; */
 }
