@@ -10,7 +10,9 @@ class control_acceuil extends CI_Controller {
 
     public function allUtilisateur($id){
         $data = array();
+        $this->load->view('header',$data);
 		$this->load->view('accueil',$data);
+        $this->load->view('footer',$data);
     }
     public function allAdmin($id){
         $data = array();

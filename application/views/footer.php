@@ -33,3 +33,6 @@
     
     <!-- FoodHut js -->
     <script src="<?php echo base_url('assets/js/foodhut.js'); ?>"></script>
+
+    </body>
+</html>
