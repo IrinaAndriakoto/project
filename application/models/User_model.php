@@ -16,12 +16,13 @@ class User_model extends CI_Model{
         $this->db->query($sql);
     }
     
-    public function completion($id_user, $genre, $poids, $taille) {
+    public function completion($id_user, $genre, $poids, $taille,$id_choice) {
         $data = array(
             'id_user' => $id_user,
             'genre' => $genre,
             'poids' => $poids,
-            'taile' => $taille
+            'taile' => $taille,
+            'id_choice'=>$id_choice
         );
     
         $this->db->insert('aboutUser', $data);
