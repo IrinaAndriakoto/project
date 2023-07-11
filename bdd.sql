@@ -60,3 +60,19 @@ CREATE TABLE if not exists activites (
 --     (14,'SIU',true),
 --     (15,'KDS',false)
 -- );
+
+create table if not exists demande (
+    id_demande int primary key auto_increment,
+    id_user int ,
+    id_code int ,
+    foreign key(id_user) references user(id_user),
+    foreign key(id_code) references code(id_code)
+);
+
+create table if not exists porte_monnaie(
+    id_money int primary key auto_increment,
+    montant float,
+    id_user int ,
+    foreign key(id_user) references user(id_user)
+); 
+

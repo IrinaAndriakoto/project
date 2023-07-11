@@ -1,13 +1,8 @@
-/* .login-dark{
- width: 400px;
- text-align: center;
- /* margin-left: 600px; */
- /* margin-top: 200px; */
- /* background-color: red; */
 
  body{
     text-align: center;
  }
+
 
 .sary{
     width: 80px;
@@ -22,10 +17,6 @@
     text-align: center;
 }
 
-/* .row{
-    margin-top: 200px;
-    margin-left: 150px;
-} */
 
 .col-md-12{
     /* background-color: rgb(238, 237, 237); */

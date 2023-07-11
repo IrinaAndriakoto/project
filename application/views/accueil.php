@@ -14,7 +14,7 @@
             <div class="col-lg-6">
                 <div class="row justify-content-center">
                     <div class="col-sm-8 py-5 my-5">
-                        <h2 class="mb-4" style="text-align:center;">You</h2> <br> 
+                        <h2 class="mb-4" style="text-align:center;"><Strong>Enter your information here.</Strong></h2> 
                         <?php echo isset($error) ? $error : ''; ?>  
                         <form method="post" action="<?php echo site_url('Login/completion_user'); ?>">
                            <div class="form-group">
@@ -32,7 +32,7 @@
                                 <option value="2">Stabiliser le poids</option>
                             </select>
                              </div>
-                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">valider</button></div>
+                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Valider</button></div>
                         </form>
                     </div>
                 </div>
@@ -46,12 +46,12 @@
             <div class="row justify-content-center" >
                 <div class="col-sm-8 py-5 my-5">
                         <h2 class="mb-4" style="text-align:center;margin-left:160px;width:300px">Your Wallet</h2> <br> 
-                        <?php echo isset($error) ? $error : ''; ?>  
-                        <form method="post" action="<?php echo site_url('Login/completion_user'); ?>">
+                        <?php echo isset($error) ? $error : ''; ?> 
                             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
                             <h3 style="width:200px;margin-left:220px"><Strong>TOTAL : $69</Strong></h3> <br> <br>
-                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit"style="width:250px;margin-left:200px">Purchase</button></div>
-                        </form>
+                            <div class="form-group"> 
+                                <a href="<?php echo site_url('Purchase/index'); ?>"><button class="btn btn-primary btn-block" type="submit"style="width:250px;margin-left:200px">Purchase</button></a> 
+                            </div>
                     </div>
                 </div>
             </div>

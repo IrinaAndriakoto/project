@@ -3331,7 +3331,36 @@ fieldset:disabled a.btn {
   line-height: 1.5;
   border-radius: 0.1rem;
 }
+.container{
+  display: flex;
+  margin-top: 100px;
+  /* margin-left: 200px; */
+}
+.offers {
+  background-color: #FFD700;
+  border-radius: 8px;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  /* margin-left:200px ; */
+  /* margin-top: 80px; */
+  /* float: left; */
+  /* display: inline-block;
+  vertical-align: top ; */
+}
 
+.offers_code{
+  background-color: #C0C0C0;
+  /* border-radius: 8px; */
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+
+  /* margin-left: 200px; */
+  /* float: rig ht; */
+  /* display: inline-block;
+  vertical-align: top; */
+}
 .btn-block {
   display: block;
   width: 100%;
