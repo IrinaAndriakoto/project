@@ -11234,6 +11234,14 @@ pre {
   min-height: 750px;
 }
 
+.header_gain {
+  height: 100vh;
+  max-height: 900px;
+  background: url(../imgs/inscr.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 750px;
+}
+
 .header .overlay {
   height: 100%;
   background: rgba(33, 37, 41, 0.85);

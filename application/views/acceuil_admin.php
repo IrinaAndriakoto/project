@@ -1,3 +1,4 @@
+
 <!-- header -->
 <header id="home" class="header">
         <div class="overlay text-white text-center">
@@ -68,33 +69,49 @@
 <?php else: ?>
             <p>Aucune activité trouvée.</p>
         <?php endif; ?>
-
-<!-- <div class="chart">
-    <canvas id="myChart"></canvas>
-</div>
+<!-- Créer l'élément canvas pour le diagramme -->
+<canvas id="myChart"></canvas>
 
 <script>
-  const ctx = document.getElementById('myChart');
+$(document).ready(function() {
+  // Récupérer les données nécessaires depuis votre contrôleur ou modèle
+  var sessionData = [10, 15, 8, 12, 20]; // Exemple de données pour les séances d'entraînement
+  var regimeData = [5, 12, 6, 10, 15]; // Exemple de données pour les régimes
 
-  new Chart(ctx, {
+  // Créer un contexte de canevas et instancier le diagramme
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai'], // Exemple de libellés pour les mois
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Séances d\'entraînement enregistrées',
+        data: sessionData,
+        backgroundColor: 'rgba(75, 192, 192, 0.5)', // Couleur de remplissage des barres
+        borderColor: 'rgba(75, 192, 192, 1)', // Couleur de bordure des barres
+        borderWidth: 1
+      }, {
+        label: 'Régimes suivis',
+        data: regimeData,
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1
       }]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          precision: 0 // Précision de l'axe Y (entiers seulement)
         }
       }
     }
   });
-</script> -->
+});
+</script>
+  
+</script>
+<script src="<?php echo  base_url('assets/js/chart.js') ?>"></script>
 <script src="<?php echo base_url('assets/vendors/jquery/jquery-3.4.1.js'); ?>"></script>
     <script src="<?php echo base_url('assets/vendors/bootstrap/bootstrap.bundle.js'); ?>"></script>
 

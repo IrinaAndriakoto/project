@@ -17,6 +17,18 @@ class Login extends CI_Controller {
     {  
         $this->load->view('acceuil');  
     }  
+    public function  gagner(){
+        // $this->load->view('header');
+        $this->load->view('gagner');
+        $this->load->view('footer');    
+
+    }
+    public function perdre(){
+        $this->load->view('perdre');
+    }
+    public function stabiliser(){
+        $this->load->view('stabiliser');        
+    }
     public function process()  
     {  
         $user = $this->input->post('user');  
@@ -78,10 +90,24 @@ class Login extends CI_Controller {
         $poids = $this->input->post('poids');
         $taile = $this->input->post('taile');
         $choice = $this->input->post('choice');
+
+        $IMC = $poids/($taile*$taile);
+
         // echo $choice;
         $this->load->model('User_model');     
         $this->User_model->completion($id,$genre,$poids,$taile,$choice);
+        if($choice == 0){
+            redirect('Login/gagner');
+            
+        }
+        if($choice == 1){
+            redirect('Login/perdre');
+        }
+        if($choice ==2){
+            redirect('Login/stabiliser');
+        }
     }  
+
   
 }  
 ?>
