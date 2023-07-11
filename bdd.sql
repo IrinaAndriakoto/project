@@ -37,20 +37,26 @@ create table if not exists regime(
     efficacite float
 );
 
-insert into code(id_code,code,isValid) values 
-    (1,'AKD',true),
-    (2,'LOL',true),
-    (3,'EWW',true),
-    (4,'POP',true),
-    (5,'ATT',true),
-    (6,'MAT',false),
-    (7,'ERR',false),
-    (8,'TYU',false),
-    (9,'UWU',true),
-    (10,'OUI',false),
-    (11,'NON',true),
-    (12,'OKE',false),
-    (13,'KII',true),
-    (14,'SIU',true),
-    (15,'KDS',false)
+CREATE TABLE if not exists activites (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    description TEXT
 );
+
+-- insert into code(id_code,code,isValid) values 
+--     (1,'AKD',true),
+--     (2,'LOL',true),
+--     (3,'EWW',true),
+--     (4,'POP',true),
+--     (5,'ATT',true),
+--     (6,'MAT',false),
+--     (7,'ERR',false),
+--     (8,'TYU',false),
+--     (9,'UWU',true),
+--     (10,'OUI',false),
+--     (11,'NON',true),
+--     (12,'OKE',false),
+--     (13,'KII',true),
+--     (14,'SIU',true),
+--     (15,'KDS',false)
+-- );

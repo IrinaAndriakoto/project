@@ -40,6 +40,35 @@
         </tr>
     </tbody>
 </table>
+
+<!-- SPORTS -->
+<?php if (isset($activites) && !empty($activite)): ?>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+    <tbody>
+      <?php foreach ($activites as $activite): ?>
+        <tr>
+                <td><?= $activite->nom ?></td>
+                <td><?= $activite->description ?></td>
+                <td>
+                    <a href="<?= site_url('acceuil_admin/edit_activite/'.$activite->id) ?>">Modifier</a>
+                    <a href="<?= site_url('acceuil_admin/delete_activite/'.$activite->id) ?>">Supprimer</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php else: ?>
+            <p>Aucune activité trouvée.</p>
+        <?php endif; ?>
+
 <!-- <div class="chart">
     <canvas id="myChart"></canvas>
 </div>
