@@ -54,7 +54,7 @@ class Login extends CI_Controller {
         $this->load->library('session');
         $this->session->set_userdata('user',$data);  
         // var_dump($data);
-        redirect('control_acceuil/allUtilisateur/'.$data[0]['id_user']); 
+        redirect('control_acceuil/allUtilisateur/'.$data[0]['id_user']);
     }       
 
     public function logout()  
@@ -63,8 +63,7 @@ class Login extends CI_Controller {
         $this->load->library('session');
         $this->session->unset_userdata('user');  
         redirect("Login");  
-    }  
-    
+    } 
     public function completion_user()
     {
         $this->load->view('accueil');  
@@ -74,10 +73,13 @@ class Login extends CI_Controller {
         $user =$this->session->userdata('user');
         $id=$user[0]['id_user'];
         $genre = $this->input->post('genre');   
+        // echo $genre;
         $poids = $this->input->post('poids');
         $taile = $this->input->post('taile');
+        $choice = $this->input->post('choice');
+        // echo $choice;
         $this->load->model('User_model');     
-        $this->User_model->completion($id,$genre,$poids,$taile);
+        $this->User_model->completion($id,$genre,$poids,$taile,$choice);
     }  
   
 }  
