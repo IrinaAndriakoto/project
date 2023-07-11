@@ -4,7 +4,8 @@
             <h2 class="display-2 font-weight-bold my-3"style="text-decoration:underline;">Choose the offer you prefer</h2>
             <div class="container">
 
-                <button style="background-color:#FFD700;border:none;width:300px;margin-left:170px;border-radius: 8px;">
+            <form action="">
+            <button style="background-color:#FFD700;border:none;width:300px;margin-left:170px;border-radius: 8px;">
                 <div class="offers">
 
                     <h3> <strong> GOLD</strong></h3>
@@ -12,16 +13,21 @@
                     
                 </div>
             </button>
-                <button style="background-color:#C0C0C0;border:none;width:300px;margin-left:250px;border-radius: 8px;">
-                <div class="offers_code"> 
+                
+            </form>
+            <form action="">
 
-                    <h3> <strong> SILVER</strong></h3>
-                    <h4>Get your code which will add <strong> $30 </strong> to your wallet </h4>
-                    <select name="codes">
-                        <?php $count=count($code);  ?>
-                        <?php for($i=0;$i<$count;$i++) { ?>
-                            <option value="<?php echo $code[$i]['id_code']; ?>">
-                                <?php $code[$i]['code']; ?>
+                <button style="background-color:#C0C0C0;border:none;width:300px;margin-left:250px;border-radius: 8px;">
+                    <div class="offers_code"> 
+                        
+                        <h3> <strong> SILVER</strong></h3>
+                        <h4>Get your code which will add <strong> $30 </strong> to your wallet </h4>
+                        <select name="codes">
+                            <option value="">Get Your Code</option>
+                            <?php $count=count($data);  
+                         for($i=0;$i<$count;$i++) { ?>
+                            <option value="<?php echo $data[$i]['id_code']; ?>">
+                                <?php echo $data[$i]['code']; ?>
                             </option>
                             <?php } ?>
                         </select>
@@ -29,6 +35,8 @@
                 </div>
             </button>
         </div>
+    </form>
+
     </header>
 <!-- core  -->
 <script src="<?php echo base_url('assets/vendors/jquery/jquery-3.4.1.js'); ?>"></script>

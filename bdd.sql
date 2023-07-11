@@ -28,6 +28,7 @@ create table if not exists choice(
 create table if not exists code (
     id_code int primary key auto_increment not null ,
     code varchar(5),
+    type int ,
     isValid boolean
 );
 
@@ -43,27 +44,28 @@ CREATE TABLE if not exists activites (
     description TEXT
 );
 
--- insert into code(id_code,code,isValid) values 
---     (1,'AKD',true),
---     (2,'LOL',true),
---     (3,'EWW',true),
---     (4,'POP',true),
---     (5,'ATT',true),
---     (6,'MAT',false),
---     (7,'ERR',false),
---     (8,'TYU',false),
---     (9,'UWU',true),
---     (10,'OUI',false),
---     (11,'NON',true),
---     (12,'OKE',false),
---     (13,'KII',true),
---     (14,'SIU',true),
---     (15,'KDS',false)
--- );
+insert into code(id_code,code,type,isValid) values 
+    (1,'AKD',2,true),
+    (2,'LOL',2,true),
+    (3,'EWW',2,true),
+    (4,'POP',2,true),
+    (5,'ATT',2,true),
+    (6,'MAT',2,false),
+    (7,'ERR',2,false),
+    (8,'TYU',2,false),
+    (9,'UWU',2,true),
+    (10,'OUI',2,false),
+    (11,'NON',2,true),
+    (12,'OKE',2,false),
+    (13,'KII',2,true),
+    (14,'SIU',2,true),
+    (15,'KDS',2,false);
+
 
 create table if not exists demande (
     id_demande int primary key auto_increment,
     id_user int ,
+    isValid boolean,
     id_code int ,
     foreign key(id_user) references user(id_user),
     foreign key(id_code) references code(id_code)

@@ -35,9 +35,8 @@
                     <a class="nav-link" href="#Service">Services</a>
                 </li>   
             </ul>
-            <a class="navbar-brand m-auto" href="#">
+            <a class="navbar-brand m-auto" href="">
                 <img src="<?php echo base_url('assets/imgs/sary.png'); ?>" class="brand-img" alt="">
-
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">

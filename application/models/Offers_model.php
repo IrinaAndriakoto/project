@@ -8,14 +8,22 @@ class Offers_model extends CI_Model{
     } 
     public function listeVola() {
         $query = $this->db->get('code');
+// var_dump($query->result_array());
         return $query->result_array();
     }
-    public function demande($id_user, $code) {
+    public function demande($id_user, $isValid, $code) {
         $data = array(
             'id_user' => $id_user,
-            'value' => $code,
+'isValid' => $isValid,
+            'id_code' => $code,
         );
     
         $this->db->insert('demande', $data);
     }
-}
+
+    public function selectDemande(){
+        $this->db->select('*');
+        $this->db->from('regime');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
