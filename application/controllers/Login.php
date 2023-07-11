@@ -62,6 +62,7 @@ class Login extends CI_Controller {
         //removing session  
         $this->load->library('session');
         $this->session->unset_userdata('user');  
+        
         redirect("Login");  
     } 
     public function completion_user()
